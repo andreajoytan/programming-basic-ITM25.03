@@ -36,7 +36,7 @@ def savings(gross_pay, tax_rate, expenses):
     
     tax_amount = int(gross_pay*tax_rate)
     net = int(gross_pay-tax_amount-expenses)
-    print(net)                
+    return net                
         
 savings(5000000, 0.12, 2000000)
 
@@ -77,7 +77,7 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     
     total_consumption = num_jobs*job_consumption
     waste = total_material-total_consumption
-    print(f"{waste}{material_units}") 
+    return(str(waste), str(material_units)) 
 
 material_waste(100, "kg", 20, 4)
 
@@ -113,7 +113,7 @@ def interest(principal, rate, periods):
     
     interest = principal*rate*periods
     final = int(principal+interest)
-    print(final) 
+    return final 
 
 interest(100000000, 0.08, 12)
 
@@ -155,6 +155,6 @@ def body_mass_index(weight, height):
     converted_weight = weight/2.2
     converted_height = ((int(height[0])*12)+int(height[1]))*0.0254
     result = converted_weight/(converted_height**2)
-    print(result)
+    return result
                    
 body_mass_index(100.5, [5, 3])   
