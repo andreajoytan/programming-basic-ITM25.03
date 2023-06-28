@@ -76,8 +76,8 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
     total_consumption = num_jobs*job_consumption
-    waste = total_material-total_consumption
-    return(str(waste), str(material_units)) 
+    waste = str(total_material-total_consumption) + str(material_units)
+    return waste 
 
 material_waste(100, "kg", 20, 4)
 
